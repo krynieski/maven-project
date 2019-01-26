@@ -18,6 +18,8 @@ pipeline {
 
 		stage ('Deploy to Staging') {
 			steps {
+				echo "Deploying to staging env..."
+				build job: 'deploy-to-staging'
 				echo "Code deployed."
 			}
 		}
